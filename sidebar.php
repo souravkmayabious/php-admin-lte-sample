@@ -62,6 +62,18 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="popup.php" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Popup</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="notice_board.php" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Notice Board</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="inputs.php" class="nav-link">
                   <i class="nav-icon bi bi-palette"></i>
                   <p>Inputs</p>

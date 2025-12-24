@@ -1,9 +1,11 @@
 <?php
 session_start();
+ob_start();
 if (!isset($_SESSION['admin_id'])) {
-    header("Location: index.php?session=timeOut");
-    exit();
+  header("Location: index.php?session=timeOut");
+  exit();
 }
+include "config.php";
 ?>
 
 <!doctype html>
@@ -37,6 +39,11 @@ if (!isset($_SESSION['admin_id'])) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+<!-- SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
