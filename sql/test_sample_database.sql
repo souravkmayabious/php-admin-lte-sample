@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2025 at 03:16 PM
+-- Generation Time: Dec 24, 2025 at 03:48 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,6 +45,77 @@ INSERT INTO `admin` (`id`, `name`, `userid`, `password`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `committee_members`
+--
+
+CREATE TABLE `committee_members` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `display_order` int(11) DEFAULT 0,
+  `status` int(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `committee_members`
+--
+
+INSERT INTO `committee_members` (`id`, `name`, `role`, `image`, `display_order`, `status`, `created_at`) VALUES
+(1, 'Abc', 'President', '1766586486_logo3.png', 0, 0, '2025-12-24 14:28:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty`
+--
+
+CREATE TABLE `faculty` (
+  `id` int(11) NOT NULL,
+  `type` enum('headmaster','teacher','para_teacher','office_staff','ict_support','library_support','maintenance') NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `designation` varchar(255) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `qualification` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `display_order` int(11) DEFAULT 0,
+  `status` int(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `faculty`
+--
+
+INSERT INTO `faculty` (`id`, `type`, `name`, `designation`, `subject`, `qualification`, `image`, `display_order`, `status`, `created_at`) VALUES
+(1, 'headmaster', 'sourav', 'mca', '', '', '1766586952_2d12c0da978d4c5c8a3db90ed7113add_t.jpeg', 0, 1, '2025-12-24 14:35:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery_images`
+--
+
+CREATE TABLE `gallery_images` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `image` varchar(255) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `status` int(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery_images`
+--
+
+INSERT INTO `gallery_images` (`id`, `title`, `image`, `category`, `status`, `created_at`) VALUES
+(1, '', '1766586205_bg-header.jpg', 'library', 1, '2025-12-24 14:23:25');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `home_page_popup`
 --
 
@@ -67,6 +138,27 @@ INSERT INTO `home_page_popup` (`id`, `title`, `description`, `link`, `image`, `u
 (4, '2', '', '', '', '2025-12-24 13:59:57', 0),
 (5, '322', 'efdfdsfcsdf', '', '', '2025-12-24 14:06:27', 0),
 (6, 'qwdwdwad', '', '', '', '2025-12-24 14:07:24', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lab_gallery`
+--
+
+CREATE TABLE `lab_gallery` (
+  `id` int(11) NOT NULL,
+  `lab_type` enum('biology','math','physics','geography','ict','nutrition') NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `status` int(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `lab_gallery`
+--
+
+INSERT INTO `lab_gallery` (`id`, `lab_type`, `image`, `status`, `created_at`) VALUES
+(1, 'biology', '1766587536_b372d8b69781b212f760e0599692dabb.jpg', 1, '2025-12-24 14:45:36');
 
 -- --------------------------------------------------------
 
@@ -103,9 +195,33 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `committee_members`
+--
+ALTER TABLE `committee_members`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `faculty`
+--
+ALTER TABLE `faculty`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery_images`
+--
+ALTER TABLE `gallery_images`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `home_page_popup`
 --
 ALTER TABLE `home_page_popup`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lab_gallery`
+--
+ALTER TABLE `lab_gallery`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -125,10 +241,34 @@ ALTER TABLE `admin`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `committee_members`
+--
+ALTER TABLE `committee_members`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `faculty`
+--
+ALTER TABLE `faculty`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `gallery_images`
+--
+ALTER TABLE `gallery_images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `home_page_popup`
 --
 ALTER TABLE `home_page_popup`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `lab_gallery`
+--
+ALTER TABLE `lab_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `notice_board`
