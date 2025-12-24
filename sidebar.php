@@ -74,6 +74,30 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="gallery_manage.php" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Gallery</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="committee_manage.php" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Managing committee</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="faculty_manage.php" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>HM & teachers</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="lab_manage.php" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Lab</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="inputs.php" class="nav-link">
                   <i class="nav-icon bi bi-palette"></i>
                   <p>Inputs</p>
