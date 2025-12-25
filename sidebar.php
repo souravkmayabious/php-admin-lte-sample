@@ -57,47 +57,47 @@
               </li> -->
               <li class="nav-item">
                 <a href="dashboard.php" class="nav-link active">
-                  <i class="nav-icon bi bi-speedometer"></i>
+                  <i class="nav-icon fa-solid fa-house-chimney"></i>
                   <p>Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="popup.php" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon fa-solid fa-message"></i>
                   <p>Popup</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="notice_board.php" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon fa-solid fa-clipboard-list"></i>
                   <p>Notice Board</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="gallery_manage.php" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon fa-solid fa-images"></i>
                   <p>Gallery</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="committee_manage.php" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon fa-solid fa-layer-group"></i>
                   <p>Managing committee</p>
                 </a>
               </li>
-               <li class="nav-item">
+              <li class="nav-item">
                 <a href="faculty_manage.php" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon fa-solid fa-user"></i>
                   <p>HM & teachers</p>
                 </a>
               </li>
-               <li class="nav-item">
+              <li class="nav-item">
                 <a href="lab_manage.php" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon fa-solid fa-flask"></i>
                   <p>Lab</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="inputs.php" class="nav-link">
                   <i class="nav-icon bi bi-palette"></i>
                   <p>Inputs</p>
@@ -115,7 +115,7 @@
                   <i class="nav-icon bi bi-star-half"></i>
                   <p>Color Mode</p>
                 </a>
-              </li>
+              </li> -->
 
 
             </ul>
